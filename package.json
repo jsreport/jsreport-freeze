@@ -1,0 +1,22 @@
+{
+  "name": "jsreport-freeze",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jan Blaha"
+  },
+  "description": "jsreport extension allowing to freeze editing of templates",
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "jsreport"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "pofider",
+      "email": "jan.blaha@hotmail.com"
+    }
+  ]
+}
