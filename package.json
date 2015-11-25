@@ -5,6 +5,11 @@
     "name": "Jan Blaha"
   },
   "description": "jsreport extension allowing to freeze editing of templates",
+  "homepage": "https://github.com/jsreport/jsreport-freeze",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jsreport/jsreport-freeze.git"
+  },
   "devDependencies": {
   },
   "dependencies": {
