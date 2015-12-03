@@ -2,7 +2,7 @@ define(["app", "marionette", "backbone", "jquery"],
     function (app, Marionette, Backbone, $) {
 
         app.on("menu-actions-render", function (context) {
-            if (app.settings.tenant.isAdmin) {
+            if (!app.settings.tenant || app.settings.tenant.isAdmin) {
                 if (app.settings.data.freeze && app.settings.data.freeze.value) {
                     context.result += "<li><a id='releaseFreezeCommand' class='validate-leaving'>Release freeze</a></li>";
                     context.on("after-render", function ($el) {
