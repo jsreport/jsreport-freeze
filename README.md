@@ -1,4 +1,5 @@
 # jsreport-freeze
+[![NPM Version](http://img.shields.io/npm/v/jsreport-freeze.svg?style=flat-square)](https://npmjs.com/package/jsreport-freeze)
 
 **jsreport extension allowing to freeze editing of templates**
 
