@@ -1,6 +1,6 @@
 {
   "name": "jsreport-freeze",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "author": {
     "name": "Jan Blaha"
   },
@@ -10,9 +10,31 @@
     "type": "git",
     "url": "git@github.com:jsreport/jsreport-freeze.git"
   },
+  "scripts": {
+    "build": "jsreport-studio-build",
+    "prepublish": "in-publish && jsreport-studio-build || not-in-publish"
+  },
+  "standard": {
+    "ignore": [
+      "main.js"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "mocha": true,
+      "browser": true
+    }
+  },
   "devDependencies": {
+    "babel-eslint": "6.0.4",
+    "eslint": "2.11.1",
+    "eslint-config-standard-jsx": "1.2.1",
+    "eslint-plugin-babel": "3.2.0",
+    "jsreport-studio-dev": "0.3.0",
+    "standard": "7.1.2"
   },
   "dependencies": {
+    "in-publish": "2.0.0"
   },
   "keywords": [
     "jsreport"
@@ -23,5 +45,11 @@
       "name": "pofider",
       "email": "jan.blaha@hotmail.com"
     }
+  ],
+  "files": [
+    "lib",
+    "index.js",
+    "jsreport.config.js",
+    "studio"
   ]
 }
