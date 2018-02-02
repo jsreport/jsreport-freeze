@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "jsreport-studio-build",
+    "start": "jsreport-studio-start --httpPort 5488",
     "prepublish": "in-publish && jsreport-studio-build || not-in-publish"
   },
   "standard": {
@@ -34,7 +35,8 @@
     "standard": "7.1.2"
   },
   "dependencies": {
-    "in-publish": "2.0.0"
+    "in-publish": "2.0.0",
+    "jsreport": "1.10.0"
   },
   "keywords": [
     "jsreport"

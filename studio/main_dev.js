@@ -1,11 +1,53 @@
+import { Component } from 'react'
 import Studio from 'jsreport-studio'
 
+class FreezeModal extends Component {
+
+  freeze () {
+    Studio.setSetting('freeze', true)
+    this.props.close()
+  }
+
+  render () {
+    return <div>
+        <h2>Freeze changes</h2> 
+        <p>
+          The freeze mode will block accidental changes in entities like templates.<br/>      
+          The only permitted operations in freeze mode are persisting logs and output reports.<br/>
+          The freeze mode can be switched back to normal using the menu command "Release freeze".
+        </p>
+        <div className='button-bar'> 
+          <button className='button confirmation' onClick={() => this.freeze()}>Freeze</button>
+        </div>
+    </div>
+  }
+}
+
+class ReleaseFreezeModal extends Component {
+  release () {
+    Studio.setSetting('freeze', false)
+    this.props.close()
+  }
+
+  render () {
+    return <div>
+        <h2>Release freeze</h2> 
+        <p>
+        This will switch the editing mode to normal.
+        </p>
+        <div className='button-bar'> 
+          <button className='button confirmation' onClick={() => this.release()}>Release</button>
+        </div>
+    </div>
+  }
+}
+
 const freeze = () => {
-  Studio.setSetting('freeze', true)
+  Studio.openModal(FreezeModal)  
 }
 
 const release = () => {
-  Studio.setSetting('freeze', false)
+  Studio.openModal(ReleaseFreezeModal)  
 }
 
 Studio.initializeListeners.push(() => {
