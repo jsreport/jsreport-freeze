@@ -11,8 +11,10 @@
 You can avoid jsreport templates editing through config file:
 ```js
 {
-	"freeze": { 
-		"hardFreeze": true
+	"extensions" {
+		"freeze": {
+			"hardFreeze": true
+		}
 	}
 }
 ```
