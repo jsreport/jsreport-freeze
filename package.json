@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "jsreport-studio-build",
+    "test": "mocha test --timeout 5000 && standard",
     "start": "jsreport-studio-start --httpPort 5488",
     "prepublish": "in-publish && jsreport-studio-build || not-in-publish"
   },
@@ -27,17 +28,19 @@
     }
   },
   "devDependencies": {
-    "babel-eslint": "6.0.4",
-    "eslint": "2.11.1",
-    "eslint-config-standard-jsx": "1.2.1",
-    "eslint-plugin-babel": "3.2.0",
-    "jsreport-studio-dev": "1.0.0",
-    "standard": "7.1.2"
-  },
-  "dependencies": {
+    "babel-eslint": "8.2.2",
+    "eslint": "4.19.1",
+    "eslint-config-standard-jsx": "5.0.0",
+    "eslint-plugin-babel": "5.0.0",
     "in-publish": "2.0.0",
-    "jsreport": "1.10.0"
+    "jsreport-core": "github:jsreport/jsreport-core#2.0.0-beta",
+    "jsreport-studio-dev": "1.1.2",
+    "jsreport-templates": "github:jsreport/jsreport-templates#2.0.0-beta",
+    "mocha": "5.0.5",
+    "should": "13.2.1",
+    "standard": "11.0.1"
   },
+  "dependencies": {},
   "keywords": [
     "jsreport"
   ],
@@ -48,6 +51,9 @@
       "email": "jan.blaha@hotmail.com"
     }
   ],
+  "engines": {
+    "node": ">=8.9"
+  },
   "files": [
     "lib",
     "index.js",
